@@ -1,12 +1,13 @@
 #!/bin/bash -x
 echo "Welcome to user registration program"
-read -p "Enter your emailID:" email
+read -p "Enter valid phone number:" phonenumber
 
-emailpattern="^[A-Za-z0-9]+([._+-][0-9a-zA-Z]+)?@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?"
+pattern="^[0-9]{2}[[:space:]][0-9]{10}$"
 
-if [[ $email =~ $emailpattern ]]
+if [[ $phonenumber =~ $pattern ]]
 then
-   echo "valid email"
+   echo "valid phone number"
 else
-   echo "invalid email"
+   echo "invalid phone number"
 fi
+
