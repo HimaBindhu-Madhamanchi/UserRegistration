@@ -2,14 +2,14 @@
 echo "Welcome to user registration program"
 
 
-read -p "Enter valid first name :" firstname
+read -p "Enter valid last name :" lastname
 
 usernamepattern="^[[:upper:]][[:lower:]]{2,}"
 
-if [[ $firstname =~ $usernamepattern ]]
+if [[ $lastname =~ $usernamepattern ]]
 then
    
-   echo "valid firstname"
+   echo "valid lastname"
 else
-    echo "invalid first name"
+    echo "invalid last name"
 fi
