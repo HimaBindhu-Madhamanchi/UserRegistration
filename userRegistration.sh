@@ -1,13 +1,12 @@
 #!/bin/bash -x
 echo "Welcome to user registration program"
-read -p "Enter valid phone number:" phonenumber
+read -p "Enter password:" password
 
-pattern="^[0-9]{2}[[:space:]][0-9]{10}$"
+passwordpattern="[a-zA-Z0-9]{8}"
 
-if [[ $phonenumber =~ $pattern ]]
+if [[ $password =~ $passwordpattern ]]
 then
-   echo "valid phone number"
+   echo "valid password"
 else
-   echo "invalid phone number"
+   echo "Invalid password"
 fi
-
