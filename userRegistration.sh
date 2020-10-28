@@ -1,15 +1,12 @@
 #!/bin/bash -x
 echo "Welcome to user registration program"
+read -p "Enter your emailID:" email
 
+emailpattern="^[A-Za-z0-9]+([._+-][0-9a-zA-Z]+)?@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?"
 
-read -p "Enter valid last name :" lastname
-
-usernamepattern="^[[:upper:]][[:lower:]]{2,}"
-
-if [[ $lastname =~ $usernamepattern ]]
+if [[ $email =~ $emailpattern ]]
 then
-   
-   echo "valid lastname"
+   echo "valid email"
 else
-    echo "invalid last name"
+   echo "invalid email"
 fi
